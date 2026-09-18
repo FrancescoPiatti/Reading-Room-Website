@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Reading Room</title>
+<meta name="description" content="Download Reading Room — clone with Git or grab the ZIP, both with one-click updates from inside the app — plus every prerequisite for macOS and Windows (Python, an AI coding assistant, Node.js), launching the app, first-run setup, and opening or hosting the site.">
+<script>
+  (function(){ try { if (localStorage.getItem('rr-site-theme') === 'dark') document.documentElement.setAttribute('data-theme','dark'); } catch(e){} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,420;9..144,560&family=Inter:wght@400;500;650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .get-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:30px;}
+  .get-grid > *{min-width:0;}                      /* long command lines scroll, never stretch the grid */
+  .get-card .cmd{overflow-x:auto;}
+  @media (max-width:760px){ .get-grid{grid-template-columns:1fr;} }
+  .get-card{position:relative; background:var(--bg-card); border:1px solid var(--line); border-radius:14px; padding:24px; box-shadow:var(--shadow-card);}
+  .get-card h3{margin-top:0;}
+  .get-badge{position:absolute; top:-11px; left:20px; background:var(--accent); color:var(--bg); font-size:11.5px; font-weight:650; letter-spacing:.04em; text-transform:uppercase; padding:3px 10px; border-radius:999px;}
+  .get-note{margin-top:18px; background:var(--bg-raised); border:1px dashed var(--line); border-radius:14px; padding:16px 20px; color:var(--ink-soft); font-size:14.5px;}
+  .os-split{display:grid; grid-template-columns:1fr 1fr; gap:10px 22px; margin:10px 0 0; padding:0; list-style:none; font-size:14.5px; color:var(--ink-soft);}
+  @media (max-width:600px){ .os-split{grid-template-columns:1fr;} }
+  .os-split b{display:block; color:var(--ink); font-size:13px; letter-spacing:.03em; text-transform:uppercase; margin-bottom:2px;}
+  .ai-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:14px 0 0;}
+  .ai-grid > *{min-width:0;}                        /* long install lines scroll inside their card */
+  @media (max-width:860px){ .ai-grid{grid-template-columns:1fr;} }
+  .ai-card{background:var(--bg-card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; box-shadow:var(--shadow-card);}
+  .ai-card h4{margin:0 0 2px; font-family:var(--serif); font-weight:560; font-size:18px; color:var(--ink);}
+  .ai-card .links{font-family:var(--mono); font-size:12.5px; margin:0 0 8px; color:var(--ink-faint);}
+  .ai-card .cmd{font-size:12.5px; padding:10px 12px; overflow-x:auto;}
+  .ai-card p{font-size:14.5px; margin:10px 0 0;}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""> Reading Room</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="how-to-use.html">How to use</a>
+      <a href="how-to-install.html" aria-current="page">Download</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle light / dark theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" style="padding-bottom:0;">
+    <p class="eyebrow">Download &amp; install</p>
+    <h1 style="font-size:clamp(34px,5.5vw,56px);">Running in five minutes</h1>
+    <p class="sub">There's nothing to compile and no service to sign up for. Get the folder, double-click the app, follow the tutorial — Reading Room sets itself up around you.</p>
+    <div class="callout">
+      <p><b>The short version:</b> get the folder (Git clone or ZIP) → double-click <code>ReadingRoom.app</code> (macOS) or <code>ReadingRoom.bat</code> (Windows) → the tutorial opens and hands you to Setup. Everything else below is detail.</p>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>Get the files</h2>
+    <p class="lead">Two ways for now — and both update in one click from inside the app. A packaged one-click installer will come later.</p>
+
+    <div class="get-grid">
+      <article class="get-card">
+        <span class="get-badge">Recommended</span>
+        <h3>Clone with Git</h3>
+        <p><b>One paste, and you never need a terminal again.</b> The line below clones Reading Room into your home folder — a safe spot (not Desktop, not OneDrive), so the app just works — and opens the folder for you. Then double-click <code>ReadingRoom.app</code> / <code>ReadingRoom.bat</code>.</p>
+        <pre class="cmd"><span class="c"># macOS — paste into Terminal:</span>
+<span class="p">cd</span> ~ &amp;&amp; <span class="p">git clone</span> https://github.com/FrancescoPiatti/Reading-Room.git ReadingRoom &amp;&amp; <span class="p">open</span> ReadingRoom
+
+<span class="c"># Windows — paste into PowerShell:</span>
+<span class="p">cd</span> ~; <span class="p">git clone</span> https://github.com/FrancescoPiatti/Reading-Room.git ReadingRoom; <span class="p">explorer</span> ReadingRoom</pre>
+        <p><b>Updating is one click.</b> Avatar menu → <b>Updates</b> checks the clone's Git remote for a newer version and pulls it in as a fast-forward; if it can't fast-forward (you've edited the code), your assistant finishes the job with <code>/update</code>. You choose <b>Later</b>, <b>Skip this version</b> or <b>Update now</b> — and an update never touches your library: your papers, notes, settings and PDFs are yours, not the repo's.</p>
+        <p class="muted">Needs <a href="https://git-scm.com/downloads">Git</a> and a free GitHub account. On a fresh Mac, the first <code>git</code> run offers to install Apple's command-line tools — accept and re-paste.</p>
+      </article>
+
+      <article class="get-card">
+        <h3>Download the ZIP</h3>
+        <p>No Git, no account setup: on the <a href="https://github.com/FrancescoPiatti/Reading-Room">repository page</a> click <b>Code → Download ZIP</b> and unzip it somewhere sensible (a plain local folder like <code>~/ReadingRoom</code> — not Desktop or a cloud-synced folder).</p>
+        <p><b>Updates work here too.</b> Avatar menu → <b>Updates</b> checks the published version on GitHub, downloads the latest ZIP and replaces the app's own files in place — the same <b>Later</b> / <b>Skip this version</b> / <b>Update now</b> choice, and your library, notes and settings are never touched. Whichever way you installed, taking a <b>Back up</b> (avatar menu) before any update is a good habit.</p>
+      </article>
+    </div>
+
+    <div class="get-note">
+      <b>Coming later:</b> a packaged installer (a signed one-click app for macOS and Windows). Git clone and ZIP are the two supported paths until then. 
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>What you need</h2>
+    <p class="lead">Three things, and only the first two for the static site. All free.</p>
+
+    <div class="steps">
+
+      <article class="step">
+        <div class="n">1</div>
+        <div>
+          <h3>Python 3.8+ — the build</h3>
+          <p>Builds your site invisibly under the hood — pure standard library, no packages, no pip, no virtualenv. You never run it yourself; the app and your AI do.</p>
+          <ul class="os-split">
+            <li><b>macOS</b> Usually already there — check with <code>python3 --version</code>. If missing: <code>xcode-select --install</code> or <a href="https://www.python.org/downloads/">python.org</a>.</li>
+            <li><b>Windows</b> Install from <a href="https://www.python.org/downloads/">python.org</a> and tick <b>"Add python.exe to PATH",</b> or <code>winget install Python.Python.3.12</code>. Check with <code>python --version</code>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">2</div>
+        <div>
+          <h3>An AI coding assistant — the author</h3>
+          <p>Reports are written by your own AI coding assistant — <a href="https://docs.claude.com/en/docs/claude-code/overview">Claude Code</a>, <a href="https://developers.openai.com/codex/cli/">Codex CLI</a>, or <a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a> — running inside the app under the subscription you already have. <b>No API key, no API billing</b>: Reading Room never calls a paid API, and nothing leaves your machine except the assistant's own traffic. You need just one of the three (you can switch per run inside the app); install it, then run it once from a terminal to log in.</p>
+          <div class="ai-grid">
+            <article class="ai-card">
+              <h4>Claude Code</h4>
+              <p class="links"><a href="https://docs.claude.com/en/docs/claude-code/overview">docs</a></p>
+              <pre class="cmd"><span class="c"># with npm (macOS / Windows / Linux):</span>
+<span class="p">npm install</span> -g @anthropic-ai/claude-code
+
+<span class="c"># or the native installer — macOS / Linux:</span>
+<span class="p">curl</span> -fsSL https://claude.ai/install.sh | <span class="p">bash</span>
+<span class="c"># Windows PowerShell:</span>
+<span class="p">irm</span> https://claude.ai/install.ps1 | <span class="p">iex</span></pre>
+              <p>Then run <code>claude</code> once and log in with your Claude account (Pro or Max).</p>
+            </article>
+            <article class="ai-card">
+              <h4>Codex CLI</h4>
+              <p class="links"><a href="https://developers.openai.com/codex/cli/">docs</a> · <a href="https://github.com/openai/codex">GitHub</a></p>
+              <pre class="cmd"><span class="c"># with npm (macOS / Windows / Linux):</span>
+<span class="p">npm install</span> -g @openai/codex
+
+<span class="c"># or, on macOS, with Homebrew:</span>
+<span class="p">brew install</span> --cask codex</pre>
+              <p>Then run <code>codex</code> once and sign in with ChatGPT (Plus, Pro or Team).</p>
+            </article>
+            <article class="ai-card">
+              <h4>Gemini CLI</h4>
+              <p class="links"><a href="https://github.com/google-gemini/gemini-cli">GitHub</a> · <a href="https://geminicli.com/docs/">docs</a></p>
+              <pre class="cmd"><span class="c"># with npm (macOS / Windows / Linux):</span>
+<span class="p">npm install</span> -g @google/gemini-cli
+
+<span class="c"># or, on macOS, with Homebrew:</span>
+<span class="p">brew install</span> gemini-cli</pre>
+              <p>Then run <code>gemini</code> once and sign in with Google.</p>
+            </article>
+          </div>
+          <p class="muted" style="margin-top:14px;">The <code>npm</code> route needs Node.js — step 3, which the app needs anyway. Whichever assistant you pick, make sure it launches from a terminal in any folder (Terminal on macOS; PowerShell or Command Prompt on Windows) — the app finds it from there.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">3</div>
+        <div>
+          <h3>Node.js 18+ — the app</h3>
+          <p>Powers the Reading Room app — the flow buttons, the integrated AI terminal behind them, live rebuilds, backup and updates. Only skip it if you just want to browse the static site.</p>
+          <ul class="os-split">
+            <li><b>macOS</b> <a href="https://nodejs.org/">nodejs.org</a> LTS or <code>brew install node</code>. If the terminal component needs compiling: <code>xcode-select --install</code>.</li>
+            <li><b>Windows</b> <a href="https://nodejs.org/">nodejs.org</a> LTS installer or <code>winget install OpenJS.NodeJS.LTS</code>. If the terminal component needs compiling: the free <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">Build Tools</a> with "Desktop development with C++".</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>Then: launch it, and make it yours</h2>
+    <div class="steps">
+
+      <article class="step">
+        <div class="n">4</div>
+        <div>
+          <h3>Launch the app</h3>
+          <p>Double-click <b><code>ReadingRoom.app</code></b> (macOS) or <b><code>ReadingRoom.bat</code></b> (Windows). The first run installs its dependencies (a minute or three — it tells you) and <b>offers a Reading Room shortcut</b> — on your Desktop or in your Applications folder (Start Menu on Windows); after that every launch starts a loopback-only server in the background and opens the app window: the catalogue, the <b>Analyze</b> button and its ▾ flows, live rebuilds, in-app PDFs and note-editing. <span class="muted">(Prefer a terminal? <code>cd workmode &amp;&amp; npm start</code> runs the same thing in the foreground with visible logs.)</span></p>
+          <p class="muted"><b>macOS notes:</b> the app is unsigned, so on first open right-click it → <b>Open</b> (or run <code>xattr -d com.apple.quarantine ReadingRoom.app</code>). Keep the folder in a plain local place like <code>~/ReadingRoom</code> — Desktop, Documents, and cloud-synced folders (OneDrive/iCloud/Dropbox) are privacy-protected, so macOS may block the app's file access (the app shows a dialog pointing you to System Settings → Privacy &amp; Security), and cloud sync can evict file contents, which stalls the server at startup.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">5</div>
+        <div>
+          <h3>First run: make it yours</h3>
+          <p>A short <b>tutorial</b> opens, then hands off to <b>Setup</b> — pick your field(s), focus views, and defaults; the app applies everything for you through your assistant. Then click <b>Analyze paper</b>, paste an arXiv id, and watch your first report land. Two example papers ship in the catalogue (<i>Attention Is All You Need</i> and Hornik's universal-approximation theorem) so you can see finished reports; remove them once you've added your own (<code>/remove &lt;id&gt;</code> in the Terminal drawer).</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">6</div>
+        <div>
+          <h3>Optional: browse without the app — or host it</h3>
+          <p>Everything the app builds is a plain static site: double-click <code>docs/index.html</code> and the catalogue opens in any browser — search, filters, reports, graph, all client-side, fonts and libraries self-hosted, so it works offline and nothing pings a CDN about what you read. To put it online for free: push to GitHub, then <b>Settings → Pages → deploy from branch, folder <code>/docs</code></b>.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="cta" style="margin-top:44px;">
+      <a class="btn btn-ghost" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to overview</a>
+      <a class="btn" href="how-to-use.html">Now see how to use it</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <span>Reading Room</span>
+    <span class="muted">· read once, keep the understanding</span>
+    <span class="sp"></span>
+    <a href="index.html">Home</a>
+    <a href="how-to-use.html">How to use</a>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.querySelector('.theme-toggle');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var dark = root.getAttribute('data-theme')==='dark';
+      if(dark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
+      try{ localStorage.setItem('rr-site-theme', dark?'light':'dark'); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>

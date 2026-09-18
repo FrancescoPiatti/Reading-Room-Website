@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to use Reading Room</title>
+<meta name="description" content="A step-by-step walkthrough of the Reading Room app: analyze a paper, read the report, browse the catalogue, follow the connections graph, compare and discuss, back up, update, and tune it to you.">
+<script>
+  (function(){ try { if (localStorage.getItem('rr-site-theme') === 'dark') document.documentElement.setAttribute('data-theme','dark'); } catch(e){} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,420;9..144,560&family=Inter:wght@400;500;650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .step ul.flows{margin:0 0 14px; padding-left:22px; color:var(--ink-soft);}
+  .step ul.flows li{margin:7px 0;}
+  .step ul.flows li b{color:var(--ink);}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""> Reading Room</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="how-to-use.html" aria-current="page">How to use</a>
+      <a href="how-to-install.html">Download</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle light / dark theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" style="padding-bottom:0;">
+    <p class="eyebrow">How to use it</p>
+    <h1 style="font-size:clamp(34px,5.5vw,56px);">From a link to a lasting note</h1>
+    <p class="sub">Reading Room is an app. Your own AI coding assistant (Claude Code, Codex CLI, or Gemini CLI) sits behind its buttons — you read a paper <b>once</b>, it writes a focused report into a catalogue you keep. Here's the whole loop.</p>
+    <div class="callout">
+      <p><b>The rhythm:</b> click a flow — <b>Analyze</b>, <b>Compare</b>, <b>Discuss</b>, or <b>Deep dive</b> — fill in the paper(s), and the assistant writes it while the catalogue rebuilds itself.</p>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2 class="visually-hidden">Step-by-step walkthrough</h2>
+    <div class="steps">
+
+      <article class="step">
+        <div class="n">1</div>
+        <div>
+          <h3>Open the app, analyze a paper</h3>
+          <p>Double-click <code>ReadingRoom.app</code> (macOS) or <code>ReadingRoom.bat</code> (Windows), then click <b>Analyze paper</b> and paste an arXiv id, an arXiv or PDF link, or the path of a PDF on disk — anything you have a PDF for. Pick which assistant writes it with the <b>claude</b> / <b>codex</b> / <b>gemini</b> pills; the <b>gear</b> next to them (also <b>Terminal ▾ → Assistant settings</b>) sets each assistant's model and reasoning effort once, and the app remembers it. Your assistant reads the whole paper and writes the report; <b>Open report</b> appears when it's ready. If the assistant needs to ask you something, <b>Show terminal</b> reveals the live session.</p>
+          <figure class="video-ph">
+            <img class="vid" src="assets/shots/analyze.gif" alt="The Analyze flow: entering an arXiv id, the assistant reading the paper, and the report building." loading="lazy">
+            <figcaption>Enter an arXiv id, the assistant writes the report, and a new card appears.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">2</div>
+        <div>
+          <h3>Read the report</h3>
+          <p>Each paper gets its own page: a one-paragraph lead, then focus views as tabs — the ones you chose in Setup, adapted to each paper (<b>Summary</b> and <b>Significance</b> are always written). Equations are real, selectable LaTeX; results land in tidy tables. Set a reading status and a star priority right on the page, open the paper itself with <b>View PDF</b>, and keep your own notes with <b>Edit notes</b>.</p>
+          <figure class="frame">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="u">reading-room · report</span></div>
+            <img src="assets/shots/report.png" alt="A report page showing the lead summary, tags, reading-status controls, and the focus-view tabs." loading="lazy">
+          </figure>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">3</div>
+        <div>
+          <h3>Browse, search &amp; filter</h3>
+          <p>The home catalogue is instant: full-text search, tag chips, and a To-read / Reading / Read filter. It shows your most recent papers first and keeps the page light.</p>
+          <figure class="frame">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="u">reading-room · catalogue</span></div>
+            <img src="assets/shots/catalogue-list.png" alt="The catalogue grid of paper cards with search, tag filters, and reading-status segments." loading="lazy">
+          </figure>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">4</div>
+        <div>
+          <h3>Follow the connections</h3>
+          <p>Open <b>Connections</b> for a force-directed graph of how your papers cite each other. Hollow <b>ghost</b> nodes are important references cited by two or more of your papers but not yet analyzed — click one and <b>Analyze</b> opens the flow with the id already filled in, or <b>Dismiss</b> it so it never resurfaces.</p>
+          <figure class="frame">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="u">reading-room · connections</span></div>
+            <img src="assets/shots/graph.png" alt="The connections graph with analyzed papers, ghost references, and a tag legend." loading="lazy">
+          </figure>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">5</div>
+        <div>
+          <h3>Keep your citations straight</h3>
+          <p>The <b>Library</b> is a grouped reference list with one-click BibTeX export, and your own custom tags act as collections. Ask your assistant to refresh venues (<code>/refresh-venues</code> in the Terminal drawer) and Reading Room checks DBLP for any preprint that has since been published, updating the venue + BibTeX while keeping the arXiv link for reading.</p>
+          <figure class="frame">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="u">reading-room · library</span></div>
+            <img src="assets/shots/library.png" alt="The library page: a grouped reference list with BibTeX export." loading="lazy">
+          </figure>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">6</div>
+        <div>
+          <h3>Compare, discuss &amp; go deeper</h3>
+          <p>The <b>▾</b> next to Analyze switches flow — each opens the same kind of overlay, with a paper picker already loaded from your catalogue.</p>
+          <ul class="flows">
+            <li><b>Compare</b> — two or three papers side by side. Search the list, tick the papers, and optionally type a <b>question or topic</b> ("which handles long sequences better, and at what cost?") so the whole comparison is organised around answering it.</li>
+            <li><b>Discuss</b> — a live conversation about a paper in the terminal, so it's the one flow that opens it. <b>End chat</b> saves the compacted chat as a Discussion below the reading list; <b>Stop discussion</b> discards it.</li>
+            <li><b>Deep dive</b> — a worked derivation, proof or mechanism trace on one idea from a report, written as its own <b>Deep dive</b> tab or merged into a section you pick.</li>
+            <li><b>What every flow shares</b> — <b>Show terminal</b> reveals the live session if the assistant needs you; <b>Stop</b> discards the run, and nothing half-written is kept; <b>Open</b> appears the moment the result is built.</li>
+          </ul>
+          <figure class="video-ph">
+            <img class="vid" src="assets/shots/apptour.gif" alt="The app: the catalogue, the flow overlays, and the terminal drawer." loading="lazy">
+            <figcaption>One-click Analyze, Compare, Discuss and Deep-dive flows — with a Stop button on every run.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">7</div>
+        <div>
+          <h3>Tune it to you</h3>
+          <p>The avatar in the header opens <b>Profile</b> and <b>Setup</b>. Setup is a short questionnaire — your name, your <b>field(s)</b>, the default <b>focus views</b> (add your own), your <b>tag vocabulary</b>, and depth/audience. It works in any discipline, and every report still adapts its sections to the paper. Finishing writes your profile + field config through your assistant — no command edits needed. Want it to know more? <b>Profile → Edit full profile</b> is a free-form page about your background, what you're working on, and what you want from reports; every report, comparison and discussion reads it.</p>
+          <figure class="video-ph">
+            <img class="vid" src="assets/shots/setup.png" alt="The Setup questionnaire — name, field, focus views, and defaults — over the blurred catalogue." loading="lazy">
+            <figcaption>The Setup questionnaire — pick your field and focus views; Finish writes your profile and calibrates every report.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">8</div>
+        <div>
+          <h3>Keep it safe, keep it current</h3>
+          <p><b>Back up</b> (avatar menu) writes one zip with your reports, notes, comparisons, discussions, settings, optionally the PDFs — and your browser reading state (status, stars, collections). Save it to Downloads, the app's own backups folder, or a path you choose; <b>Restore from zip</b> brings it all back on a new machine (merge, or replace everything). <b>Updates</b> (avatar menu) works however you installed: a Git clone is checked against its remote and fast-forwarded (if it can't be, your assistant finishes the job with <code>/update</code>); a ZIP download is checked against the published version on GitHub, and the latest ZIP is downloaded and unpacked over the app's own files. When a new version is there you choose <b>Later</b> (ask again at the next launch), <b>Skip this version</b> (never again for that version — a newer one will still be offered) or <b>Update now</b> (one click, plus a one-click restart when the app itself changed). Your library, notes and settings are never touched — but taking a Back up first never hurts.</p>
+        </div>
+      </article>
+
+      <article class="step">
+        <div class="n">9</div>
+        <div>
+          <h3>Prefer the terminal?</h3>
+          <p>Every button runs a command you can also type yourself: open the <b>Terminal</b> drawer, start your assistant with the ▾, and use <code>/explain-paper</code>, <code>/compare</code>, <code>/learn</code>, <code>/deep-dive</code>, <code>/remove</code>, <code>/setup</code>, <code>/backup</code> or <code>/update</code> — add <code>--approve</code> to skip a command's confirmation gate. Or skip the window entirely with <code>cd workmode &amp;&amp; npm start</code>. Same assistant, same subscription, same library.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="cta" style="margin-top:44px;">
+      <a class="btn btn-ghost" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to overview</a>
+      <a class="btn" href="how-to-install.html">Download it</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <span>Reading Room</span>
+    <span class="muted">· read once, keep the understanding</span>
+    <span class="sp"></span>
+    <a href="index.html">Home</a>
+    <a href="how-to-install.html">Download</a>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.querySelector('.theme-toggle');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var dark = root.getAttribute('data-theme')==='dark';
+      if(dark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
+      try{ localStorage.setItem('rr-site-theme', dark?'light':'dark'); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Room — read a paper once, keep the understanding</title>
+<meta name="description" content="Reading Room turns papers into focused, multi-tab breakdowns in a fast static catalogue you own — written by your own AI coding assistant (Claude Code, Codex CLI, or Gemini CLI). No API key, no API billing.">
+<script>
+  /* set theme before paint to avoid a flash; light is default */
+  (function(){ try { if (localStorage.getItem('rr-site-theme') === 'dark') document.documentElement.setAttribute('data-theme','dark'); } catch(e){} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,420;9..144,560&family=Inter:wght@400;500;650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""> Reading Room</a>
+    <nav class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="how-to-use.html">How to use</a>
+      <a href="how-to-install.html">Download</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle light / dark theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <p class="eyebrow">A reading room for papers</p>
+    <h1>Read a paper once.<br>Keep the understanding.</h1>
+    <p class="sub">Reading Room turns each paper into a focused, multi-tab breakdown tailored to your field, with the views you choose. Everything lives in a fast, searchable catalogue you own. Written by your own AI coding assistant (Claude Code, Codex CLI, or Gemini CLI) under the subscription you already have — <b>no API key, no API billing</b>, no lock-in.</p>
+    <div class="cta">
+      <a class="btn" href="how-to-use.html">See how it works
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="how-to-install.html">Download</a>
+    </div>
+    <figure class="frame">
+      <div class="frame-bar"><i></i><i></i><i></i><span class="u">reading-room · catalogue</span></div>
+      <img src="assets/shots/catalogue.png" alt="The Reading Room catalogue: a searchable grid of paper cards with tags and reading status." loading="lazy">
+    </figure>
+  </section>
+
+  <section class="section wrap">
+    <h2>A catalogue, not a folder of PDFs</h2>
+    <p class="lead">Every paper you read becomes a self-contained page with the focus views as tabs and live equations — and joins a catalogue you can search, filter, and connect. It builds to plain HTML you can open offline or host free on GitHub Pages.</p>
+
+    <div class="features">
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg></span>
+        <h3>Focused, multi-tab reports</h3>
+        <p>The focus views you choose — math, methods, results, significance, … — each its own tab with LaTeX via MathJax, adapted to each paper (Summary and Significance always written).</p>
+      </div>
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <h3>Searchable catalogue</h3>
+        <p>Instant client-side search, a controlled set of tags, and per-paper reading status &amp; priority that persist in your browser.</p>
+      </div>
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="9" r="2.5"/><circle cx="9" cy="18" r="2.5"/><line x1="7.2" y1="7.4" x2="16.9" y2="8"/><line x1="6.4" y1="8.2" x2="8.2" y2="15.8"/></svg></span>
+        <h3>Connections graph</h3>
+        <p>A force-directed map of how your papers cite each other, with ghost nodes suggesting key references you haven't analyzed yet.</p>
+      </div>
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+        <h3>Reference library</h3>
+        <p>A grouped reference list with one-click BibTeX export — preprints get cleaned up to their published venue when one exists.</p>
+      </div>
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="16" rx="1"/></svg></span>
+        <h3>Side-by-side comparisons</h3>
+        <p>Put 2–3 papers next to each other on the dimensions that actually differentiate them — core idea, complexity, results, limitations. Or ask a question, and the whole comparison is organised around answering it.</p>
+      </div>
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>
+        <h3>Deep dives &amp; discussions</h3>
+        <p>Go a level lower on one idea — a full proof or derivation — as its own tab or merged into a section. Or discuss a paper interactively and save the compacted chat as a Discussion.</p>
+      </div>
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></span>
+        <h3>It's an app</h3>
+        <p>Double-click to launch. Analyze, Compare, Discuss and Deep dive are buttons — your assistant runs behind them and the new report appears the moment it's done. Stop a run, back up everything to one zip, or install an update, all from the same window.</p>
+      </div>
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+        <h3>No API key needed</h3>
+        <p>Reports are written by your own AI coding assistant — Claude Code, Codex CLI, or Gemini CLI — under the subscription you already have. No API billing, no key; nothing leaves your machine except the assistant's own traffic. The output is plain HTML, and it's yours.</p>
+      </div>
+      <div class="feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 12 0v1"/><circle cx="18.5" cy="8.5" r="2.5"/></svg></span>
+        <h3>Adapts to your field</h3>
+        <p>Setup seeds a tag vocabulary and the focus-view tabs for your discipline — add your own — and every report is pitched to your profile and split into the topics that fit that paper.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section wrap">
+    <div class="show">
+      <div class="show-text">
+        <span class="tag">The report</span>
+        <h3>The reasoning, not just the result</h3>
+        <p>Each report goes deep on your field's own core. Where a paper has central equations, they are rendered as real LaTeX together with the definitions and the logic that connect them; where it doesn't, the report works through the methods, the experimental design and the statistics instead. Headline numbers land in clean results tables, and a "novelty &amp; significance" tab gives you an honest read on what's new, what it rests on, and where it might fail.</p>
+        <p class="muted">Tabs switch instantly; equations and tables are selectable, copyable text.</p>
+      </div>
+      <figure class="frame">
+        <div class="frame-bar"><i></i><i></i><i></i><span class="u">reading-room · report</span></div>
+        <img src="assets/shots/report.png" alt="A Reading Room report page with the lead summary, tags, reading status, and focus-view tabs." loading="lazy">
+      </figure>
+    </div>
+
+    <div class="show rev">
+      <div class="show-text">
+        <span class="tag">Connections</span>
+        <h3>See how the ideas link up</h3>
+        <p>The catalogue isn't a flat list — it's a graph. Solid nodes are papers you've analyzed; hollow "ghost" nodes are important references cited by two or more of your papers but not yet read. Click one to read it into your library, or dismiss it for good.</p>
+        <p class="muted">Node size reflects how often a paper is cited within your library.</p>
+      </div>
+      <figure class="frame">
+        <div class="frame-bar"><i></i><i></i><i></i><span class="u">reading-room · connections</span></div>
+        <img src="assets/shots/graph.png" alt="The connections graph: a force-directed network of analyzed papers and ghost references, colored by tag." loading="lazy">
+      </figure>
+    </div>
+
+    <div class="show">
+      <div class="show-text">
+        <span class="tag">Library</span>
+        <h3>Citations, sorted out</h3>
+        <p>A reference-library view groups your papers and exports BibTeX with one click. Keep the arXiv link for reading, but cite the published conference or journal entry — Reading Room checks DBLP and updates preprints that have since appeared.</p>
+      </div>
+      <figure class="frame">
+        <div class="frame-bar"><i></i><i></i><i></i><span class="u">reading-room · library</span></div>
+        <img src="assets/shots/library.png" alt="The library page: a grouped list of references with BibTeX export." loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section wrap" style="text-align:center;">
+    <h2>See it in motion</h2>
+    <p class="lead">The one-click Analyze flow, start to finish:</p>
+    <figure class="video-ph" style="max-width:760px; margin-left:auto; margin-right:auto;">
+      <img class="vid" src="assets/shots/analyze.gif" alt="The one-click Analyze flow: entering a paper, the assistant reading it, and the report page building." loading="lazy">
+      <figcaption>The one-click Analyze flow — enter a paper, the report builds.</figcaption>
+    </figure>
+    <div class="cta">
+      <a class="btn" href="how-to-use.html">Walk through it step by step
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <span>Reading Room</span>
+    <span class="muted">· read once, keep the understanding</span>
+    <span class="sp"></span>
+    <a href="how-to-use.html">How to use</a>
+    <a href="how-to-install.html">Download</a>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.querySelector('.theme-toggle');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var dark = root.getAttribute('data-theme')==='dark';
+      if(dark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
+      try{ localStorage.setItem('rr-site-theme', dark?'light':'dark'); }catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>
