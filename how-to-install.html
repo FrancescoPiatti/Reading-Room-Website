@@ -75,7 +75,7 @@
 <span class="c"># Windows — paste into PowerShell:</span>
 <span class="p">cd</span> ~; <span class="p">git clone</span> https://github.com/FrancescoPiatti/Reading-Room.git ReadingRoom; <span class="p">explorer</span> ReadingRoom</pre>
         <p><b>Updating is one click.</b> Avatar menu → <b>Updates</b> checks the clone's Git remote for a newer version and pulls it in as a fast-forward; if it can't fast-forward (you've edited the code), your assistant finishes the job with <code>/update</code>. You choose <b>Later</b>, <b>Skip this version</b> or <b>Update now</b> — and an update never touches your library: your papers, notes, settings and PDFs are yours, not the repo's.</p>
-        <p class="muted">Needs <a href="https://git-scm.com/downloads">Git</a> and a free GitHub account. On a fresh Mac, the first <code>git</code> run offers to install Apple's command-line tools — accept and re-paste.</p>
+        <p class="muted">Needs <a href="https://git-scm.com/downloads">Git</a>. On a fresh Mac, the first <code>git</code> run offers to install Apple's command-line tools — accept and re-paste.</p>
       </article>
 
       <article class="get-card">
@@ -112,7 +112,7 @@
         <div class="n">2</div>
         <div>
           <h3>An AI coding assistant — the author</h3>
-          <p>Reports are written by your own AI coding assistant — <a href="https://docs.claude.com/en/docs/claude-code/overview">Claude Code</a>, <a href="https://developers.openai.com/codex/cli/">Codex CLI</a>, or <a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a> — running inside the app under the subscription you already have. <b>No API key, no API billing</b>: Reading Room never calls a paid API, and nothing leaves your machine except the assistant's own traffic. You need just one of the three (you can switch per run inside the app); install it, then run it once from a terminal to log in.</p>
+          <p>Reports are written by your own AI coding assistant — <a href="https://docs.claude.com/en/docs/claude-code/overview">Claude Code</a>, <a href="https://developers.openai.com/codex/cli/">Codex CLI</a>, or <a href="https://github.com/google-gemini/gemini-cli">Gemini CLI</a> — running inside the app under the subscription you already have. <b>No API key, no API billing</b>: Reading Room never calls a paid API, and nothing leaves your machine except the assistant's own traffic, a version check against GitHub on launch (no library data is sent), arXiv when you open a PDF, and MathJax's CDN for equations. You need just one of the three (you can switch per run inside the app); install it, then run it once from a terminal to log in.</p>
           <div class="ai-grid">
             <article class="ai-card">
               <h4>Claude Code</h4>
