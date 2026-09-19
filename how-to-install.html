@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Download Reading Room</title>
-<meta name="description" content="Download Reading Room — clone with Git or grab the ZIP, both with one-click updates from inside the app — plus every prerequisite for macOS and Windows (Python, an AI coding assistant, Node.js), launching the app, first-run setup, and opening or hosting the site.">
+<meta name="description" content="Download Reading Room — clone with Git or download a release build, both with one-click updates from inside the app — plus every prerequisite for macOS, Windows and Linux (Python, an AI coding assistant, Node.js), launching the app, first-run setup, and opening or hosting the site.">
 <script>
   (function(){ try { if (localStorage.getItem('rr-site-theme') === 'dark') document.documentElement.setAttribute('data-theme','dark'); } catch(e){} })();
 </script>
@@ -56,13 +56,13 @@
     <h1 style="font-size:clamp(34px,5.5vw,56px);">Running in five minutes</h1>
     <p class="sub">There's nothing to compile and no service to sign up for. Get the folder, double-click the app, follow the tutorial — Reading Room sets itself up around you.</p>
     <div class="callout">
-      <p><b>The short version:</b> get the folder (Git clone or ZIP) → double-click <code>ReadingRoom.app</code> (macOS) or <code>ReadingRoom.bat</code> (Windows) → the tutorial opens and hands you to Setup. Everything else below is detail.</p>
+      <p><b>The short version:</b> get the folder (Git clone or a release download) → double-click <code>ReadingRoom.app</code> (macOS), <code>ReadingRoom.bat</code> (Windows) or <code>ReadingRoom.sh</code> (Linux) → the tutorial opens and hands you to Setup. Everything else below is detail.</p>
     </div>
   </section>
 
   <section class="section wrap">
     <h2>Get the files</h2>
-    <p class="lead">Two ways for now — and both update in one click from inside the app. A packaged one-click installer will come later.</p>
+    <p class="lead">Two ways — and both update in one click from inside the app. A signed one-click installer will come later.</p>
 
     <div class="get-grid">
       <article class="get-card">
@@ -73,20 +73,23 @@
 <span class="p">cd</span> ~ &amp;&amp; <span class="p">git clone</span> https://github.com/FrancescoPiatti/Reading-Room.git ReadingRoom &amp;&amp; <span class="p">open</span> ReadingRoom
 
 <span class="c"># Windows — paste into PowerShell:</span>
-<span class="p">cd</span> ~; <span class="p">git clone</span> https://github.com/FrancescoPiatti/Reading-Room.git ReadingRoom; <span class="p">explorer</span> ReadingRoom</pre>
+<span class="p">cd</span> ~; <span class="p">git clone</span> https://github.com/FrancescoPiatti/Reading-Room.git ReadingRoom; <span class="p">explorer</span> ReadingRoom
+
+<span class="c"># Linux — paste into a terminal:</span>
+<span class="p">cd</span> ~ &amp;&amp; <span class="p">git clone</span> https://github.com/FrancescoPiatti/Reading-Room.git ReadingRoom &amp;&amp; <span class="p">cd</span> ReadingRoom</pre>
         <p><b>Updating is one click.</b> Avatar menu → <b>Updates</b> checks the clone's Git remote for a newer version and pulls it in as a fast-forward; if it can't fast-forward (you've edited the code), your assistant finishes the job with <code>/update</code>. You choose <b>Later</b>, <b>Skip this version</b> or <b>Update now</b> — and an update never touches your library: your papers, notes, settings and PDFs are yours, not the repo's.</p>
         <p class="muted">Needs <a href="https://git-scm.com/downloads">Git</a>. On a fresh Mac, the first <code>git</code> run offers to install Apple's command-line tools — accept and re-paste.</p>
       </article>
 
       <article class="get-card">
-        <h3>Download the ZIP</h3>
-        <p>No Git, no account setup: on the <a href="https://github.com/FrancescoPiatti/Reading-Room">repository page</a> click <b>Code → Download ZIP</b> and unzip it somewhere sensible (a plain local folder like <code>~/ReadingRoom</code> — not Desktop or a cloud-synced folder).</p>
-        <p><b>Updates work here too.</b> Avatar menu → <b>Updates</b> checks the published version on GitHub, downloads the latest ZIP and replaces the app's own files in place — the same <b>Later</b> / <b>Skip this version</b> / <b>Update now</b> choice, and your library, notes and settings are never touched. Whichever way you installed, taking a <b>Back up</b> (avatar menu) before any update is a good habit.</p>
+        <h3>Download a release</h3>
+        <p>No Git, no account setup: open <a href="https://github.com/FrancescoPiatti/Reading-Room/releases">Releases</a> and take the ZIP for your platform — it ships with the app's components already built, so the first launch opens straight away instead of installing anything. Unzip it somewhere sensible (a plain local folder like <code>~/ReadingRoom</code> — not Desktop or a cloud-synced folder).</p>
+        <p><b>Updates work here too.</b> Avatar menu → <b>Updates</b> follows the <i>published releases</i> — never a half-finished change — downloads the new build and replaces the app's own files in place: the same <b>Later</b> / <b>Skip this version</b> / <b>Update now</b> choice, and your library, notes and settings are never touched. Either way, Reading Room writes a backup of your library before it updates.</p>
       </article>
     </div>
 
     <div class="get-note">
-      <b>Coming later:</b> a packaged installer (a signed one-click app for macOS and Windows). Git clone and ZIP are the two supported paths until then. 
+      <b>Coming later:</b> a signed one-click installer for macOS and Windows. Until then, a Git clone or a release download are the two supported paths — both on macOS, Windows and Linux. 
     </div>
   </section>
 
@@ -174,7 +177,7 @@
         <div class="n">4</div>
         <div>
           <h3>Launch the app</h3>
-          <p>Double-click <b><code>ReadingRoom.app</code></b> (macOS) or <b><code>ReadingRoom.bat</code></b> (Windows). The first run installs its dependencies (a minute or three — it tells you) and <b>offers a Reading Room shortcut</b> — on your Desktop or in your Applications folder (Start Menu on Windows); after that every launch starts a loopback-only server in the background and opens the app window: the catalogue, the <b>Analyze</b> button and its ▾ flows, live rebuilds, in-app PDFs and note-editing. <span class="muted">(Prefer a terminal? <code>cd workmode &amp;&amp; npm start</code> runs the same thing in the foreground with visible logs.)</span></p>
+          <p>Double-click <b><code>ReadingRoom.app</code></b> (macOS), <b><code>ReadingRoom.bat</code></b> (Windows) or <b><code>ReadingRoom.sh</code></b> (Linux — it also adds a menu entry on first run). The first run installs its dependencies (a minute or three — it tells you; a release download has them already) and <b>offers a Reading Room shortcut</b> — on your Desktop or in your Applications folder (Start Menu on Windows); after that every launch starts a loopback-only server in the background and opens the app window: the catalogue, the <b>Analyze</b> button and its ▾ flows, live rebuilds, in-app PDFs and note-editing. <span class="muted">(Prefer a terminal? <code>cd workmode &amp;&amp; npm start</code> runs the same thing in the foreground with visible logs.)</span></p>
           <p class="muted"><b>macOS notes:</b> the app is unsigned, so on first open right-click it → <b>Open</b> (or run <code>xattr -d com.apple.quarantine ReadingRoom.app</code>). Keep the folder in a plain local place like <code>~/ReadingRoom</code> — Desktop, Documents, and cloud-synced folders (OneDrive/iCloud/Dropbox) are privacy-protected, so macOS may block the app's file access (the app shows a dialog pointing you to System Settings → Privacy &amp; Security), and cloud sync can evict file contents, which stalls the server at startup.</p>
         </div>
       </article>
