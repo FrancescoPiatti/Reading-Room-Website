@@ -2,7 +2,7 @@
 
 The website for [Reading Room](https://github.com/FrancescoPiatti/Reading-Room): what it is,
 how it works, and how to install it. Live at
-**https://francescopiatti.github.io/Reading-Room-Website/**.
+**https://francescopiatti.com/Reading-Room-Website/**.
 
 ## What Reading Room is
 
