@@ -83,7 +83,7 @@
 
       <article class="get-card">
         <h3>Download a release</h3>
-        <p>No Git, no account setup: open <a href="https://github.com/FrancescoPiatti/Reading-Room/releases">Releases</a> and take the ZIP for your platform — it ships with the app's components already built, so the first launch opens straight away instead of installing anything. Unzip it somewhere sensible (a plain local folder like <code>~/ReadingRoom</code> — not Desktop or a cloud-synced folder).</p>
+        <p>No Git, no account setup: open <a href="https://github.com/FrancescoPiatti/Reading-Room/releases">Releases</a> and take the ZIP for your platform — it ships with the app's components already built, so the first launch opens straight away instead of installing anything. (Today that is the macOS build for Apple silicon; on Windows and Linux, clone for now — updates work the same either way.) Unzip it somewhere sensible (a plain local folder like <code>~/ReadingRoom</code> — not Desktop or a cloud-synced folder).</p>
         <p><b>Updates work here too.</b> Avatar menu → <b>Updates</b> follows the <i>published releases</i> — never a half-finished change — downloads the new build and replaces the app's own files in place: the same <b>Later</b> / <b>Skip this version</b> / <b>Update now</b> choice, and your library, notes and settings are never touched. Either way, Reading Room writes a backup of your library before it updates.</p>
       </article>
     </div>
@@ -178,7 +178,7 @@
         <div>
           <h3>Launch the app</h3>
           <p>Double-click <b><code>ReadingRoom.app</code></b> (macOS), <b><code>ReadingRoom.bat</code></b> (Windows) or <b><code>ReadingRoom.sh</code></b> (Linux — it also adds a menu entry on first run). The first run installs its dependencies (a minute or three — it tells you; a release download has them already) and <b>offers a Reading Room shortcut</b> — on your Desktop or in your Applications folder (Start Menu on Windows); after that every launch starts a loopback-only server in the background and opens the app window: the catalogue, the <b>Analyze</b> button and its ▾ flows, live rebuilds, in-app PDFs and note-editing. <span class="muted">(Prefer a terminal? <code>cd workmode &amp;&amp; npm start</code> runs the same thing in the foreground with visible logs.)</span></p>
-          <p class="muted"><b>macOS notes:</b> the app is unsigned, so on first open right-click it → <b>Open</b> (or run <code>xattr -d com.apple.quarantine ReadingRoom.app</code>). Keep the folder in a plain local place like <code>~/ReadingRoom</code> — Desktop, Documents, and cloud-synced folders (OneDrive/iCloud/Dropbox) are privacy-protected, so macOS may block the app's file access (the app shows a dialog pointing you to System Settings → Privacy &amp; Security), and cloud sync can evict file contents, which stalls the server at startup.</p>
+          <p class="muted"><b>macOS notes:</b> the app is unsigned, so on first open right-click it → <b>Open</b> (or run <code>xattr -dr com.apple.quarantine ReadingRoom.app</code>). Keep the folder in a plain local place like <code>~/ReadingRoom</code> — Desktop, Documents, and cloud-synced folders (OneDrive/iCloud/Dropbox) are privacy-protected, so macOS may block the app's file access (the app shows a dialog pointing you to System Settings → Privacy &amp; Security), and cloud sync can evict file contents, which stalls the server at startup.</p>
         </div>
       </article>
 
